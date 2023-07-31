@@ -8,15 +8,22 @@ public class StartState : IState
 
     public void OnEnterState(StateController stateController)
     {
-        exitButton = GameObject.FindWithTag("Exit Button").GetComponent<ExitButton>();
-        exitButton.EnableExitButton();
+        //Exit buttons only appears on Windows platform
+        if (Application.platform == RuntimePlatform.WindowsPlayer)
+        {
+            exitButton = GameObject.FindWithTag("Exit Button").GetComponent<ExitButton>();
+            exitButton.EnableExitButton();
+        }
     }
 
     public void UpdateState(StateController stateController)
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Application.platform == RuntimePlatform.WindowsPlayer)
         {
-            exitButton.ExitGame();
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                exitButton.ExitGame();
+            }
         }
         
         //Only allow player to start the game if there aren't any falling objects and the player didn't exit the game
@@ -25,8 +32,8 @@ public class StartState : IState
              Input.GetKeyDown(KeyCode.DownArrow) || 
              Input.GetKeyDown(KeyCode.LeftArrow) || 
              Input.GetKeyDown(KeyCode.RightArrow)) && 
-             !GameObject.FindWithTag("Level Generator").GetComponent<LevelGenerator>().fallingObjects && 
-             !exitButton.exitButtonPressed)
+             !GameObject.FindWithTag("Level Generator").GetComponent<LevelGenerator>().fallingObjects /*&& 
+             !exitButton.exitButtonPressed*/)
         {
             //Enable camera movement and change to play state
             Camera.main.GetComponent<CameraMovement>().enabled = true;
@@ -36,6 +43,9 @@ public class StartState : IState
 
     public void OnExitState(StateController stateController)
     {
-        exitButton.DisableExitButton();
+        if (Application.platform == RuntimePlatform.WindowsPlayer)
+        {
+            exitButton.DisableExitButton();
+        }
     }
 }

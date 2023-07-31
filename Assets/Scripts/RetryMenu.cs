@@ -6,6 +6,7 @@ public class RetryMenu : MonoBehaviour
 {
     public Animator darkPanelAnim;
     public Animator retryButtonAnim;
+    public GameObject retryMenuUI;
 
     public bool retryButtonPressed = false;
 
@@ -16,6 +17,7 @@ public class RetryMenu : MonoBehaviour
 
     public void EnableRetryMenu()
     {
+        retryMenuUI.SetActive(true);
         darkPanelAnim.SetBool("Active", true);
         retryButtonAnim.SetBool("Active", true);
     }
@@ -25,5 +27,4 @@ public class RetryMenu : MonoBehaviour
         darkPanelAnim.SetBool("Active", false);
         retryButtonAnim.SetBool("Active", false);
     }
-
 }

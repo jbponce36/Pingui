@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         if (isDead)
             return;
 
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && isOnGround)
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && isOnGround)
         {
             if (canJumpTo(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z + 1)))
             {
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
                 return;
             }
         } 
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && isOnGround)
+        else if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && isOnGround)
         {
             if (canJumpTo(new Vector3(transform.position.x, transform.position.y - 1, transform.position.z - 1)))
             {
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && isOnGround) 
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && isOnGround) 
         {
             if (canJumpTo(new Vector3(transform.position.x - 1, transform.position.y, transform.position.z)))
             {
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
                 return;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && isOnGround) 
+        else if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && isOnGround) 
         {
             if (canJumpTo(new Vector3(transform.position.x + 1, transform.position.y, transform.position.z)))
             {

@@ -41,6 +41,7 @@ public class SoundManager : MonoBehaviour
 
     public static void PlayJumpSound()
     {
+        //Slightly change pitch of jump sound everytime for variety
         sm.jumpSound.pitch = sm.startingJumpPitch + Random.Range(-sm.changingJumpPitch, sm.changingJumpPitch);
         sm.jumpSound.Play();
     }

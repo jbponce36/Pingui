@@ -16,12 +16,12 @@ public class RetryState : IState
     {
         if (retryMenu.retryButtonPressed || Input.GetKeyDown(KeyCode.Space))
         {
+            retryMenu.DisableRetryMenu();
+            
             stateController.LoadMainScene();
 
             Camera.main.GetComponent<CameraMovement>().enabled = false;
 
-            retryMenu.DisableRetryMenu();
-            
             PlayerStats.ResetStats();
             
             stateController.ChangeState(stateController.startState);
