@@ -4,9 +4,14 @@
 
 Pingui is an endless runner (jumper?) platform game where you control Pingui and help him climb the mountain. Evade enemies and collect keys to unlock chests along the way.
 
+<hr>
+
+<img src="https://img.itch.zone/aW1hZ2UvMjE4ODc3NS8xMjk0NTc2Ny5wbmc=/347x500/V1h%2F42.png" width="33.3%"><img src="https://img.itch.zone/aW1hZ2UvMjE4ODc3NS8xMjk0NTc2OC5wbmc=/347x500/8LZUsi.png" width="33.3%"><img src="https://img.itch.zone/aW1hZ2UvMjE4ODc3NS8xMzAxNDY2MS5wbmc=/347x500/YrRMjR.png" width="33.3%">
+
 ## Getting started
 - Try it on itch.io: https://jbponce.itch.io/pingui
 - From Unity project: Load MainScene.
+
 
 ## Controls
 - Arrow keys or WASD keys: Move the player.
@@ -33,6 +38,10 @@ Darkens the screen and shows the retry button.
 - To check if the player can move to a certain position, overlap a sphere at the position where the player wants to move and check for collisions with obstacles.
 - Jump sound pitch changes slightly and randomly everytime the player jumps for variety.
 - Trees opacity turns down when the player is behind them. For this, [Alex Ocias' dither transparency shader](https://ocias.com/blog/unity-stipple-transparency-shader/) was used. Simply making the material transparent wouldn't work because trees will render incorrectly.
+
+<b>Dither transparency preview</b>
+
+<img src="https://img.itch.zone/aW1hZ2UvMjE4ODc3NS8xMjk0NTc2OS5wbmc=/347x500/m%2FXQVf.png">
 
 ## Assets
 
