@@ -5,7 +5,7 @@
 Pingui is an endless runner (jumper?) platform game where you control Pingui and help him climb the mountain. Evade enemies and collect keys to unlock chests along the way.
 
 ## Getting started
-- Download and try it on itch.io: https://jbponce.itch.io/pingui
+- Try it on itch.io: https://jbponce.itch.io/pingui
 - From Unity project: Load MainScene.
 
 ## Controls
@@ -29,8 +29,8 @@ Darkens the screen and shows the retry button.
 - Use of interfaces for state handling.
 - Rows of tiles get created when the camera reaches the top of the screen.
 - Custom gravity so the player falls faster
-- Movement is separated in 2 axis: Instead of using a diagonal force vector for the jump impulse, it's separated in its Y and Z components. Player jumps vertically using Y jump impulse component and moves forward or backwards linearly using Z component. When tha player collides with the ground, we stop all movement and correct the position.
-- To check if the player can move to a certain position, we overlap a sphere in the position where the player wants to move and check for collisions with obstacles.
+- Movement is separated in 2 axis: Instead of using a diagonal force vector for the jump impulse, it's separated in its Y and Z components. Player jumps vertically using Y jump impulse component and moves forward or backwards linearly using Z component. When the player collides with the ground, stop all movement and correct the position.
+- To check if the player can move to a certain position, overlap a sphere at the position where the player wants to move and check for collisions with obstacles.
 - Jump sound pitch changes slightly and randomly everytime the player jumps for variety.
 - Trees opacity turns down when the player is behind them. For this, [Alex Ocias' dither transparency shader](https://ocias.com/blog/unity-stipple-transparency-shader/) was used. Simply making the material transparent wouldn't work because trees will render incorrectly.
 
@@ -72,13 +72,11 @@ Title: Interface Sounds
 Author: Kenney  
 URL: https://opengameart.org/content/interface-sounds  
 Copyright/Attribution Notice: "www.kenney.nl"  
-File(s): kenney_interfaceSounds.zip  
 
 Title: Cutie Pie  
 Author: FrancisLeeMusic  
 URL: https://opengameart.org/content/cutie-pie  
 File(s): cutie_pie.wav (converted to mp3 and cut)  
-
 
 ## Credits
 Made by: Julieta Belén Ponce
