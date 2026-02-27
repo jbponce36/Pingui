@@ -10,7 +10,6 @@ Pingui is an endless runner (jumper?) platform game where you control Pingui and
 
 ## Getting started
 - Try it on itch.io: https://jbponce.itch.io/pingui
-- From Unity project: Load MainScene.
 
 
 ## Controls
