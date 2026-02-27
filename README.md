@@ -1,6 +1,6 @@
 # Pingui by jbponce36
 
-![Penguin Banner 2](https://github.com/jbponce36/Pingui/assets/12723528/3d45cdc1-bc61-4583-a313-39a10d24c5db)
+![Penguin Banner 2](https://img.itch.zone/aW1nLzEyOTQ2NjAxLnBuZw==/original/8lg1z4.png)
 
 Pingui is an endless runner (jumper?) platform game where you control Pingui and help him climb the mountain. Evade enemies and collect keys to unlock chests along the way.
 
